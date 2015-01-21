@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/.idea/copyright/Apache_License_v2.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/Background.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/Default.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/Icon-72.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/Icon-Small-50.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/Icon-Small.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/Icon-Small@2x.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/Icon.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/Icon@2x.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/iTunesArtwork" charset="UTF-8" />
+  </component>
+</project>

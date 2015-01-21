@@ -1,0 +1,7 @@
+# IntelliJ IDEA
+\.idea/workspace\.xml
+
+# IDE-agnostic
+target/
+build/
+\.gradle/
