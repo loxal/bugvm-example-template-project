@@ -16,13 +16,28 @@
 
 package net.loxal.example.kotlin.ios
 
+import org.robovm.apple.coregraphics.CGRect
+import org.robovm.apple.foundation.NSAutoreleasePool
+import org.robovm.apple.uikit.UIApplication
+import org.robovm.apple.uikit.UIApplicationDelegateAdapter
+import org.robovm.apple.uikit.UIApplicationLaunchOptions
+import org.robovm.apple.uikit.UIButton
+import org.robovm.apple.uikit.UIButtonType
+import org.robovm.apple.uikit.UIColor
+import org.robovm.apple.uikit.UIControl
+import org.robovm.apple.uikit.UIControlState
+import org.robovm.apple.uikit.UIEvent
+import org.robovm.apple.uikit.UIScreen
+import org.robovm.apple.uikit.UIWindow
+import kotlin.platform.platformStatic
+
 public class HelloWorld : UIApplicationDelegateAdapter() {
     private var clickCount: Int = 0
 
     override fun didFinishLaunching(app: UIApplication?, launchOptions: UIApplicationLaunchOptions?): Boolean {
         val button = UIButton.create(UIButtonType.System)
         button.setFrame(CGRect(100.0, 100.0, 90.0, 30.0))
-        button.setTitle("Kotlin :)", UIControlState.None)
+        button.setTitle("Hello, Kotlin!", UIControlState.None)
 
         button.addOnTouchUpInsideListener(object : UIControl.OnTouchUpInsideListener {
             override fun onTouchUpInside(control: UIControl, event: UIEvent) {

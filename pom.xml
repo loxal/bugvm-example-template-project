@@ -23,6 +23,10 @@
     <groupId>net.loxal.example.ios</groupId>
     <artifactId>robovm-template-ios-app</artifactId>
     <name>RoboVM Template iOS App</name>
+    <description>
+        A template project for writing iOS apps in both Kotlin and/or Java
+        using either Maven or Gradle as the build tool.
+    </description>
     <packaging>jar</packaging>
     <version>1.0.0-RELEASE</version>
 
@@ -80,8 +84,8 @@
                         </goals>
                         <configuration>
                             <sourceDirs>
-                                <source>src/main/java</source>
                                 <source>src/main/kotlin</source>
+                                <source>src/main/java</source>
                                 <source>src/main/resources</source>
                             </sourceDirs>
                         </configuration>
@@ -94,8 +98,8 @@
                         </goals>
                         <configuration>
                             <sourceDirs>
-                                <source>src/test/java</source>
                                 <source>src/test/kotlin</source>
+                                <source>src/test/java</source>
                                 <source>src/test/resources</source>
                             </sourceDirs>
                         </configuration>
