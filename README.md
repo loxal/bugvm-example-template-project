@@ -7,11 +7,15 @@ Currently it’s not possible to start the application from IntelliJ IDEA.
 	* Xcode
 	* Java JDK 7
 
+* The initial build takes around 2min.
+	All subsequent builds are substantially faster.
+
 * Run with Maven `mvn clean compile robovm:create-ipa robovm:iphone-sim`
+	* Run a “Hello, World!” app written in ***Kotlin***
+	`mvn clean compile robovm:iphone-sim -Drobovm.mainClass=net.loxal.example.kotlin.ios.HelloWorld`
 
 * Run with Gradle `gradle clean build createIPA launchIPhoneSimulator`
 	* tested with v2.2.1
-	* the initial build takes around 2min, all subsequent builds are substantially faster
 
 # References
 * [RoboVM Project](http://www.robovm.com)
