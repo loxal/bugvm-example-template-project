@@ -1,15 +1,16 @@
 # RoboVM Template Project
-An OOB working *RoboVM* template project for *IntelliJ IDEA*, Maven, and **Gradle** in order to build iOS apps.
+An OOB working *RoboVM* template project for *IntelliJ IDEA*, **Maven**, and **Gradle** in order to build iOS apps.
+Currently it’s not possible to start the application from IntelliJ IDEA.
 
 ## Getting Started
 * Prerequisites
-	* XCode needs to be installed
-	* Gradle, tested with v2.2.1
+	* Xcode
 	* Java JDK 7
 
 * Run with Maven `mvn clean compile robovm:create-ipa robovm:iphone-sim`
 
 * Run with Gradle `gradle clean build createIPA launchIPhoneSimulator`
+	* tested with v2.2.1
 	* the initial build takes around 2min, all subsequent builds are substantially faster
 
 # References
