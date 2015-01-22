@@ -42,13 +42,13 @@ public class HelloWorld extends UIApplicationDelegateAdapter {
 	@Override
 	public boolean didFinishLaunching(final UIApplication app, final UIApplicationLaunchOptions launchOptions) {
 		final UIButton button = UIButton.create(UIButtonType.System);
-		button.setFrame(new CGRect(100.0, 100.0, 90.0, 30.0));
-		button.setTitle("Click here!", UIControlState.None);
+		button.setFrame(new CGRect(100, 100, 90, 30));
+		button.setTitle("Touch :)", UIControlState.None);
 
 		button.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
 			@Override
 			public void onTouchUpInside(UIControl control, UIEvent event) {
-				button.setTitle("Touched #" + clickCount++, UIControlState.None);
+				button.setTitle("Touch #" + ++clickCount, UIControlState.None);
 			}
 		});
 

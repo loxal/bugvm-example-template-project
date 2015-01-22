@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ Copyright 2015 Alexander Orlov <alexander.orlov@loxal.net>
   ~
@@ -14,3 +15,50 @@
   ~ limitations under the License.
   -->
 
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.loxal.example.ios</groupId>
+    <artifactId>robovm-template-ios-app</artifactId>
+    <name>RoboVM Template iOS App</name>
+    <packaging>jar</packaging>
+    <version>1.0.0-RELEASE</version>
+
+    <properties>
+        <robovm.version>1.0.0-beta-03</robovm.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.robovm</groupId>
+            <artifactId>robovm-rt</artifactId>
+            <version>${robovm.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.robovm</groupId>
+            <artifactId>robovm-cocoatouch</artifactId>
+            <version>${robovm.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.robovm</groupId>
+                <artifactId>robovm-maven-plugin</artifactId>
+                <version>${robovm.version}</version>
+                <configuration>
+                    <config>
+                        <mainClass>net.loxal.example.ios.HelloWorld</mainClass>
+                        <os>ios</os>
+                        <arch>x86</arch>
+                    </config>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

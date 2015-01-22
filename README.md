@@ -6,7 +6,10 @@ An OOB working *RoboVM* template project for *IntelliJ IDEA*, Maven, and **Gradl
 	* XCode needs to be installed
 	* Gradle, tested with v2.2.1
 	* Java JDK 7
-* Run `gradle clean build createIPA launchIPhoneSimulator`
+
+* Run with Maven `mvn clean compile robovm:create-ipa robovm:iphone-sim`
+
+* Run with Gradle `gradle clean build createIPA launchIPhoneSimulator`
 	* the initial build takes around 2min, all subsequent builds are substantially faster
 
 # References
