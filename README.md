@@ -14,6 +14,10 @@ Currently it’s not possible to start the application from IntelliJ IDEA.
 	* Run a “Hello, World!” app written in ***Kotlin***
 	`mvn clean compile robovm:iphone-sim -Drobovm.mainClass=net.loxal.example.kotlin.ios.HelloWorld`
 
+	<img src="hello-world-ios-robovm-kotlin.png" alt="“Hello, World!” in Kotlin" title="“Hello, World!” in Kotlin"
+	width="150" height="276">
+
+
 * Run with Gradle `gradle clean build createIPA launchIPhoneSimulator`
 	* tested with v2.2.1
 
