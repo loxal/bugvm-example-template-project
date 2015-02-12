@@ -19,10 +19,10 @@
     <orderEntry type="library" exported="" name="Gradle: org.robovm:robovm-rt:1.0.0-beta-03" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.robovm:robovm-cocoatouch:1.0.0-beta-03" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.robovm:robovm-objc:1.0.0-beta-03" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:0.10.195" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-runtime:0.10.195" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-rt:1.0.0-beta-03" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-cocoatouch:1.0.0-beta-03" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-objc:1.0.0-beta-03" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:0.10.770" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-runtime:0.10.770" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-rt:1.0.0-beta-04" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-cocoatouch:1.0.0-beta-04" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-objc:1.0.0-beta-04" level="project" />
   </component>
 </module>

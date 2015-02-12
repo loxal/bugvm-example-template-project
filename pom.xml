@@ -31,8 +31,9 @@
     <version>1.0.1-RELEASE</version>
 
     <properties>
-        <robovm.version>1.0.0-beta-03</robovm.version>
-        <kotlin.version>0.10.195</kotlin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <robovm.version>1.0.0-beta-04</robovm.version>
+        <kotlin.version>0.10.770</kotlin.version>
         <robovm.mainClass>net.loxal.example.ios.HelloWorld</robovm.mainClass>
     </properties>
 
