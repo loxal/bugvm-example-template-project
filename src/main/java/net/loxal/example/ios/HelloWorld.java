@@ -16,23 +16,15 @@
 
 package net.loxal.example.ios;
 
-import org.robovm.apple.coregraphics.CGRect;
+import net.loxal.example.ios.view.RootViewController;
 import org.robovm.apple.foundation.NSAutoreleasePool;
 import org.robovm.apple.uikit.UIApplication;
 import org.robovm.apple.uikit.UIApplicationDelegateAdapter;
 import org.robovm.apple.uikit.UIApplicationLaunchOptions;
-import org.robovm.apple.uikit.UIButton;
-import org.robovm.apple.uikit.UIButtonType;
-import org.robovm.apple.uikit.UIColor;
-import org.robovm.apple.uikit.UIControl;
-import org.robovm.apple.uikit.UIControlState;
-import org.robovm.apple.uikit.UIEvent;
 import org.robovm.apple.uikit.UIScreen;
 import org.robovm.apple.uikit.UIWindow;
 
 public class HelloWorld extends UIApplicationDelegateAdapter {
-	private int clickCount;
-
 	public static void main(final String... args) {
 		final NSAutoreleasePool autoreleasePool = new NSAutoreleasePool();
 		UIApplication.main(args, null, HelloWorld.class);
@@ -41,20 +33,8 @@ public class HelloWorld extends UIApplicationDelegateAdapter {
 
 	@Override
 	public boolean didFinishLaunching(final UIApplication app, final UIApplicationLaunchOptions launchOptions) {
-		final UIButton button = UIButton.create(UIButtonType.System);
-		button.setFrame(new CGRect(100, 100, 90, 30));
-		button.setTitle("Touch :)", UIControlState.None);
-
-		button.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
-			@Override
-			public void onTouchUpInside(UIControl control, UIEvent event) {
-				button.setTitle("Touch #" + ++clickCount, UIControlState.None);
-			}
-		});
-
 		final UIWindow window = new UIWindow(UIScreen.getMainScreen().getNativeBounds());
-		window.setBackgroundColor(UIColor.white());
-		window.addSubview(button);
+		window.setRootViewController(new RootViewController());
 		window.makeKeyAndVisible();
 
 		return true;
