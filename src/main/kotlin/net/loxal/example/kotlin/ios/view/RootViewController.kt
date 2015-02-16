@@ -25,7 +25,7 @@ import org.robovm.apple.uikit.UIControlState
 import org.robovm.apple.uikit.UIEvent
 import org.robovm.apple.uikit.UIViewController
 
-public class RootViewController : UIViewController() {
+class RootViewController : UIViewController() {
     private var clickCount: Int = 0
 
     {
@@ -34,7 +34,7 @@ public class RootViewController : UIViewController() {
 
         val button = UIButton.create(UIButtonType.System)
         button.setFrame(CGRect(60.0, 100.0, 200.0, 30.0))
-        button.setTitle("Hello, World in Kotlin!", UIControlState.None)
+        button.setTitle("“Hello World” in Kotlin!", UIControlState.None)
 
         button.addOnTouchUpInsideListener(object : UIControl.OnTouchUpInsideListener {
             override fun onTouchUpInside(control: UIControl, event: UIEvent) {

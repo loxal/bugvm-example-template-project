@@ -5,7 +5,7 @@ Currently it’s not possible to start the application from IntelliJ IDEA.
 ## Getting Started
 * Prerequisites
 	* Xcode
-	* Java JDK 7
+	* Java JDK 8
 
 * The initial build takes around 2min.
 	All subsequent builds are substantially faster.

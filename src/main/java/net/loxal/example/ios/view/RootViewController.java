@@ -20,9 +20,7 @@ import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.UIButton;
 import org.robovm.apple.uikit.UIButtonType;
 import org.robovm.apple.uikit.UIColor;
-import org.robovm.apple.uikit.UIControl;
 import org.robovm.apple.uikit.UIControlState;
-import org.robovm.apple.uikit.UIEvent;
 import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewController;
 
@@ -37,12 +35,8 @@ public class RootViewController extends UIViewController {
 		button.setFrame(new CGRect(100, 100, 90, 30));
 		button.setTitle("Touch :)", UIControlState.None);
 
-		button.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
-			@Override
-			public void onTouchUpInside(UIControl control, UIEvent event) {
-				button.setTitle("Touch #" + ++clickCount, UIControlState.None);
-			}
-		});
+		button.addOnTouchUpInsideListener((control, event) ->
+			button.setTitle("Touch #" + ++clickCount, UIControlState.None));
 
 		view.addSubview(button);
 	}
