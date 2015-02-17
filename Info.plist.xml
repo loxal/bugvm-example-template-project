@@ -47,10 +47,10 @@
             <integer>1</integer>
             <integer>2</integer>
         </array>
-        <key>UIRequiredDeviceCapabilities</key>
-        <array>
-            <string>armv8</string>
-        </array>
+        <!--<key>UIRequiredDeviceCapabilities</key>-->
+        <!--<array>-->
+        <!--<string>armv8</string>-->
+        <!--</array>-->
         <key>UISupportedInterfaceOrientations</key>
         <array>
             <string>UIInterfaceOrientationPortrait</string>

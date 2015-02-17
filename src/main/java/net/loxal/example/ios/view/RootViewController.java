@@ -36,7 +36,8 @@ public class RootViewController extends UIViewController {
 		button.setTitle("Touch :)", UIControlState.None);
 
 		button.addOnTouchUpInsideListener((control, event) ->
-			button.setTitle("Touch #" + ++clickCount, UIControlState.None));
+				button.setTitle("Touch #" + ++clickCount, UIControlState.None)
+		);
 
 		view.addSubview(button);
 	}

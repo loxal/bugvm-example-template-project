@@ -1,2 +1,3 @@
 # Backlog
 
+* fix below(?) 8-bit images that are reported when running robovm:io-device
