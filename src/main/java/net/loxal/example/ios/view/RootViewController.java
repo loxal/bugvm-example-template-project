@@ -25,20 +25,21 @@ import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewController;
 
 public class RootViewController extends UIViewController {
-	private int clickCount;
+    private int clickCount;
 
-	public RootViewController() {
-		final UIView view = getView();
-		view.setBackgroundColor(UIColor.white());
+    public RootViewController() {
+        final UIView view = getView();
+        view.setBackgroundColor(UIColor.white());
 
-		final UIButton button = UIButton.create(UIButtonType.System);
-		button.setFrame(new CGRect(100, 100, 90, 30));
-		button.setTitle("Touch :)", UIControlState.None);
+        final UIButton button = UIButton.create(UIButtonType.System);
+        button.setFrame(new CGRect(100, 100, 90, 30));
+        button.setTitle("Touch :)", UIControlState.Normal);
 
-		button.addOnTouchUpInsideListener((control, event) ->
-				button.setTitle("Touch #" + ++clickCount, UIControlState.None)
-		);
+        button.addOnTouchUpInsideListener((control, event) ->
+                        button.setTitle("Touch #" + ++clickCount, UIControlState.Normal)
+        );
 
-		view.addSubview(button);
-	}
+        view.addSubview(button);
+    }
+
 }

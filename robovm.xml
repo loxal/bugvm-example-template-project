@@ -26,4 +26,14 @@
     </resources>
     <target>ios</target>
     <iosInfoPList>Info.plist.xml</iosInfoPList>
+    <forceLinkClasses>
+        <pattern>com.android.org.conscrypt.OpenSSLProvider</pattern>
+        <pattern>com.android.org.conscrypt.JSSEProvider</pattern>
+        <pattern>org.apache.harmony.security.provider.cert.DRLCertFactory</pattern>
+        <pattern>org.apache.harmony.security.provider.crypto.CryptoProvider</pattern>
+        <pattern>com.android.org.bouncycastle.jce.provider.BouncyCastleProvider</pattern>
+        <pattern>org.apache.commons.logging.impl.WeakHashtable</pattern>
+        <pattern>java.util.logging.ConsoleHandler</pattern>
+        <pattern>java.util.logging.SimpleFormatter</pattern>
+    </forceLinkClasses>
 </config>

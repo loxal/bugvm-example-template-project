@@ -24,6 +24,12 @@ import org.robovm.apple.uikit.UIControl
 import org.robovm.apple.uikit.UIControlState
 import org.robovm.apple.uikit.UIEvent
 import org.robovm.apple.uikit.UIViewController
+import org.apache.http.impl.client.DefaultHttpClient
+import org.apache.http.client.methods.HttpGet
+import java.net.URI
+import org.apache.http.HttpStatus
+import java.io.ByteArrayOutputStream
+import java.util.logging.Logger
 
 class RootViewController : UIViewController() {
     private var clickCount: Int = 0
@@ -34,13 +40,29 @@ class RootViewController : UIViewController() {
 
         val button = UIButton.create(UIButtonType.System)
         button.setFrame(CGRect(60.0, 100.0, 200.0, 30.0))
-        button.setTitle("“Hello World” in Kotlin!", UIControlState.None)
+        button.setTitle("“Hello World” in Kotlin!", UIControlState.Normal)
 
         button.addOnTouchUpInsideListener(object : UIControl.OnTouchUpInsideListener {
             override fun onTouchUpInside(control: UIControl, event: UIEvent) {
-                button.setTitle("Touch #" + ++clickCount, UIControlState.None)
+                button.setTitle("Touch #" + ++clickCount, UIControlState.Normal)
             }
         })
+
+        fun helloRest() {
+            val httpClient = DefaultHttpClient()
+            val response = httpClient.execute(HttpGet(URI.create("http://rest-kit-test-v1.test.cf.hybris.com/dilbert-quote/manager")))
+            val statusLine = response.getStatusLine()
+            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
+                val out = ByteArrayOutputStream()
+                response.getEntity().writeTo(out)
+                val responseContent = out.toString()
+                out.close()
+                Logger.getGlobal().info(responseContent)
+            } else {
+                response.getEntity().getContent().close()
+            }
+        }
+        helloRest()
 
         view.addSubview(button)
     }

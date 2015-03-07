@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run App" type="robovm.config" factoryName="iOS Application" singleton="true">
+    <module name="" />
+    <option name="sdk" value="8.1" />
+    <option name="device" value="iPhone-6" />
+    <option name="moduleName" value="robovm-template" />
+    <method />
+  </configuration>
+</component>

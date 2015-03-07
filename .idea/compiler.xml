@@ -23,7 +23,11 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="robovm" />
+        <module name="robovm-template" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="robovm-template" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
