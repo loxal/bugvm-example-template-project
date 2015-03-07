@@ -24,9 +24,6 @@ import org.robovm.apple.uikit.UIControlState;
 import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewController;
 
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-
 public class RootViewController extends UIViewController {
     private int clickCount;
 
@@ -42,39 +39,6 @@ public class RootViewController extends UIViewController {
                         button.setTitle("Touch #" + ++clickCount, UIControlState.Normal)
         );
 
-
-        Client c = ClientBuilder.newClient();
-
-        c.target("http://example.com");
-
-
-        // TODO take a look at rxjava-apache-http !!!!!!
-//		https://github.com/ReactiveX/RxApacheHttp
-//        try {
-//            System.out.println("test");
-//            HttpClient httpclient = new DefaultHttpClient();
-//            HttpResponse response = httpclient.execute(new HttpGet(URI.create("http://example.com")));
-//            StatusLine statusLine = response.getStatusLine();
-//            System.out.println("statusLine.getStatusCode() = " + statusLine.getStatusCode());
-//            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
-//
-//                ByteArrayOutputStream out = new ByteArrayOutputStream();
-//                response.getEntity().writeTo(out);
-//                String responseString = out.toString();
-//                out.close();
-////				button.setTitle(responseString, UIControlState.None);
-////                Logger.getGlobal().warning(responseString);
-////					System.out.println("responseString = " + responseString);
-//                //..more logic
-//            } else {
-//                //Closes the connection.
-//                System.out.println("123123 = " + 123123);
-//                response.getEntity().getContent().close();
-//                throw new IOException(statusLine.getReasonPhrase());
-//            }
-//        } catch (IOException e) {
-//
-//        }
         view.addSubview(button);
     }
 

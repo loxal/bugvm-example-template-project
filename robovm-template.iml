@@ -19,25 +19,10 @@
     <orderEntry type="library" exported="" name="Gradle: org.robovm:robovm-rt:1.0.0-beta-03" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.robovm:robovm-cocoatouch:1.0.0-beta-03" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.robovm:robovm-objc:1.0.0-beta-03" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jersey.core:jersey-common:2.16" level="project" />
-    <orderEntry type="library" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.2" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jersey.bundles.repackaged:jersey-guava:2.16" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-api:2.4.0-b09" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-utils:2.4.0-b09" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.hk2.external:aopalliance-repackaged:2.4.0-b09" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.hk2.external:javax.inject:2.4.0-b09" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-locator:2.4.0-b09" level="project" />
-    <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.hk2:osgi-resource-locator:1.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jersey.core:jersey-server:2.16" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish.jersey.media:jersey-media-jaxb:2.16" level="project" />
-    <orderEntry type="library" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.jersey.core:jersey-client:2.16" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:0.10.770" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-runtime:0.10.770" level="project" />
     <orderEntry type="library" name="Maven: org.robovm:robovm-rt:1.0.0-beta-04" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-cocoatouch:1.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-objc:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-cocoatouch:1.0.0-beta-04" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-objc:1.0.0-beta-04" level="project" />
   </component>
 </module>
