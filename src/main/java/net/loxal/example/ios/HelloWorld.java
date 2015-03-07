@@ -24,7 +24,10 @@ import org.robovm.apple.uikit.UIApplicationLaunchOptions;
 import org.robovm.apple.uikit.UIScreen;
 import org.robovm.apple.uikit.UIWindow;
 
+import java.util.logging.Logger;
+
 public class HelloWorld extends UIApplicationDelegateAdapter {
+	public static final Logger LOG = Logger.getGlobal();
 	public static void main(final String... args) {
 		final NSAutoreleasePool autoreleasePool = new NSAutoreleasePool();
 		UIApplication.main(args, null, HelloWorld.class);
