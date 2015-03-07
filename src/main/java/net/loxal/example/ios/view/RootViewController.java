@@ -64,7 +64,7 @@ public class RootViewController extends UIViewController {
     private void initQuoteContainer() {
         quoteContainer.setFrame(new CGRect(10.0, 100, 300, 100));
         quoteContainer.setText(INIT_QUOTE);
-        quoteContainer.setHighlightedTextColor(UIColor.blue());
+        quoteContainer.setShadowColor(UIColor.blue());
         quoteContainer.setFont(UIFont.getSystemFont(12.0));
 
         view.addSubview(quoteContainer);
@@ -77,22 +77,26 @@ public class RootViewController extends UIViewController {
 
         nextQuote.addOnTouchUpInsideListener((control, event) -> {
             final String managerQuote = fetchManagerQuote();
-            try {
-                final Quote quote = mapper.readValue(managerQuote, Quote.class);
-                quoteContainer.setText(quote.getQuote());
-            } catch (final IOException e) {
-                HelloWorld.LOG.severe(e.getMessage());
-            }
+            showQuote(managerQuote);
         });
     }
 
-    private String fetchManagerQuote() {
+    private void showQuote(String managerQuote) {
         try {
+            final Quote quote = mapper.readValue(managerQuote, Quote.class);
+            quoteContainer.setText("“" + quote.getQuote() + "” \n – Dilbert, the Manager");
+            quoteContainer.adjustsFontSizeToFitWidth();
+        } catch (final IOException e) {
+            HelloWorld.LOG.severe(e.getMessage());
+        }
+    }
+
+    private String fetchManagerQuote() {
+        try (final ByteArrayOutputStream out = new ByteArrayOutputStream()) {
             final HttpResponse response = httpClient.execute(httpGet);
             final StatusLine statusLine = response.getStatusLine();
             final HttpEntity entity = response.getEntity();
             if (HttpStatus.SC_OK == statusLine.getStatusCode()) {
-                final ByteArrayOutputStream out = new ByteArrayOutputStream();
                 entity.writeTo(out);
                 return out.toString();
             } else {
