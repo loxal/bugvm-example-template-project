@@ -16,7 +16,9 @@
 
 package net.loxal.example.ios.view;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import net.loxal.example.ios.HelloWorld;
+import net.loxal.example.kotlin.ios.model.Quote;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -39,27 +41,33 @@ import java.io.IOException;
 import java.net.URI;
 
 public class RootViewController extends UIViewController {
+    private static final String INIT_QUOTE = "Locally it works.";
     private final UIView view = getView();
-    private final UILabel quotationContainer = new UILabel();
+    private final UILabel quoteContainer = new UILabel();
     private final UIButton nextQuote = UIButton.create(UIButtonType.System);
+    private final ObjectMapper mapper = new ObjectMapper();
+
+    private final HttpClient httpClient = new DefaultHttpClient();
+    private final URI uri = URI.create("http://rest-kit-test-v1.test.cf.hybris.com/dilbert-quote/manager");
+    private final HttpGet httpGet = new HttpGet(uri);
 
     {
         view.setBackgroundColor(UIColor.white());
 
         initNextQuoteUi();
-        initQuotationContainer();
+        initQuoteContainer();
     }
 
     public RootViewController() {
     }
 
-    private void initQuotationContainer() {
-        quotationContainer.setFrame(new CGRect(10.0, 100, 300, 100));
-        quotationContainer.setText("This never happened before.");
-        quotationContainer.setHighlightedTextColor(UIColor.blue());
-        quotationContainer.setFont(UIFont.getSystemFont(12.0));
+    private void initQuoteContainer() {
+        quoteContainer.setFrame(new CGRect(10.0, 100, 300, 100));
+        quoteContainer.setText(INIT_QUOTE);
+        quoteContainer.setHighlightedTextColor(UIColor.blue());
+        quoteContainer.setFont(UIFont.getSystemFont(12.0));
 
-        view.addSubview(quotationContainer);
+        view.addSubview(quoteContainer);
     }
 
     private void initNextQuoteUi() {
@@ -69,18 +77,17 @@ public class RootViewController extends UIViewController {
 
         nextQuote.addOnTouchUpInsideListener((control, event) -> {
             final String managerQuote = fetchManagerQuote();
-            quotationContainer.setText(managerQuote);
-
-//            val mapper = ObjectMapper()
-//            val restCode = mapper.readValue(restCodeData, javaClass < RestCode > ())
+            try {
+                final Quote quote = mapper.readValue(managerQuote, Quote.class);
+                quoteContainer.setText(quote.getQuote());
+            } catch (final IOException e) {
+                HelloWorld.LOG.severe(e.getMessage());
+            }
         });
     }
 
     private String fetchManagerQuote() {
         try {
-            final HttpClient httpClient = new DefaultHttpClient();
-            final URI uri = URI.create("http://rest-kit-test-v1.test.cf.hybris.com/dilbert-quote/manager");
-            final HttpGet httpGet = new HttpGet(uri);
             final HttpResponse response = httpClient.execute(httpGet);
             final StatusLine statusLine = response.getStatusLine();
             final HttpEntity entity = response.getEntity();
@@ -92,8 +99,8 @@ public class RootViewController extends UIViewController {
                 entity.getContent().close();
             }
         } catch (final IOException e) {
-            HelloWorld.LOG.info(e.getMessage());
+            HelloWorld.LOG.severe(e.getMessage());
         }
-        return "Locally it works!";
+        return INIT_QUOTE;
     }
 }
