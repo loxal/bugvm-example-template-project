@@ -50,7 +50,7 @@ public class RootViewController extends UIViewController {
         initQuotationContainer();
     }
 
-    RootViewController() {
+    public RootViewController() {
     }
 
     private void initQuotationContainer() {
