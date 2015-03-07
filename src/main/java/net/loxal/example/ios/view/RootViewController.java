@@ -61,9 +61,8 @@ public class RootViewController extends UIViewController {
     }
 
     private void initQuoteContainer() {
-        quoteContainer.setFrame(new CGRect(10.0, 100, 300, 100));
+        quoteContainer.setFrame(new CGRect(5, 100, 310, 100));
         quoteContainer.setText(INIT_QUOTE);
-        quoteContainer.setBackgroundColor(UIColor.lightGray());
 
         view.addSubview(quoteContainer);
     }
@@ -83,7 +82,7 @@ public class RootViewController extends UIViewController {
         try {
             final Quote quote = mapper.readValue(managerQuote, Quote.class);
             quoteContainer.setText("“" + quote.getQuote()
-                    + "” \n\n\n \t\t\t\t\t                         – Dilbert, the Manager");
+                    + "” \n\n\n \t\t\t\t\t\t – Dilbert, the Manager");
         } catch (final IOException e) {
             HelloWorld.LOG.severe(e.getMessage());
         }
