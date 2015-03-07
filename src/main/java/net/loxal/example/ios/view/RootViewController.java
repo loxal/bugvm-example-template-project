@@ -16,7 +16,6 @@
 
 package net.loxal.example.ios.view;
 
-import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -24,7 +23,9 @@ import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.UIButton;
 import org.robovm.apple.uikit.UIButtonType;
 import org.robovm.apple.uikit.UIColor;
+import org.robovm.apple.uikit.UIControl;
 import org.robovm.apple.uikit.UIControlState;
+import org.robovm.apple.uikit.UIEvent;
 import org.robovm.apple.uikit.UILabel;
 import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewController;
@@ -35,6 +36,7 @@ import java.net.URI;
 public class RootViewController extends UIViewController {
     final HttpClient httpClient = new DefaultHttpClient();
     final URI uri = URI.create("http://rest-kit-test-v1.test.cf.hybris.com/dilbert-quote/manager");
+    final UILabel label = new UILabel();
     private int clickCount;
     public RootViewController() {
         final UIView view = getView();
@@ -44,25 +46,34 @@ public class RootViewController extends UIViewController {
         button.setFrame(new CGRect(100, 100, 90, 30));
         button.setTitle("Touch :)", UIControlState.Normal);
 
-        final UILabel label = new UILabel();
         label.setFrame(new CGRect(10.0, 240.0, 300.0, 100.0));
         label.setText("This never happened before?!");
         label.setBackgroundColor(UIColor.blue());
         view.addSubview(label);
 
-        button.addOnTouchUpInsideListener((control, event) -> {
-            button.setTitle("Touch #" + ++clickCount, UIControlState.Normal);
-            label.setText("Touch #" + ++clickCount);
-            fetchManagerQuote();
+        button.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
+            @Override
+            public void onTouchUpInside(UIControl control, UIEvent event) {
+                fetchManagerQuote();
+            }
         });
+//        button.addOnTouchUpInsideListener((control, event) -> {
+////            button.setTitle("Touch #" + ++clickCount, UIControlState.Normal);
+////            label.setText("Touch #" + ++clickCount);
+//            fetchManagerQuote();
+//        });
 
         view.addSubview(button);
     }
 
     public void fetchManagerQuote() {
-//        Logger.getGlobal().info("hello");
         try {
-            final HttpResponse response = httpClient.execute(new HttpGet(uri));
+            final HttpGet httpGet = new HttpGet(uri);
+            label.setText(httpGet.getMethod());
+            httpClient.execute(httpGet);
+//            final HttpResponse response = httpClient.execute();
+//            httpClient.execute(new HttpGet(uri));
+//            httpClient.execute(null);
 //        val statusLine = response.getStatusLine()
 //        Logger.getGlobal().info("ere")
 //            return "blahaaaaa!";
