@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.robovm:robovm-objc:1.0.0-LOXAL">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/robovm/robovm-objc/1.0.0-LOXAL/robovm-objc-1.0.0-LOXAL.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/robovm/robovm-objc/1.0.0-LOXAL/robovm-objc-1.0.0-LOXAL-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/robovm/robovm-objc/1.0.0-LOXAL/robovm-objc-1.0.0-LOXAL-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

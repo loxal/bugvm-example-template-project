@@ -39,6 +39,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.netflix.rxjava</groupId>
+            <artifactId>rxjava-apache-http</artifactId>
+            <version>0.20.7</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
@@ -47,13 +53,13 @@
         <dependency>
             <groupId>org.robovm</groupId>
             <artifactId>robovm-rt</artifactId>
-            <version>${robovm.version}</version>
+            <version>1.0.0-LOXAL</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.robovm</groupId>
             <artifactId>robovm-cocoatouch</artifactId>
-            <version>${robovm.version}</version>
+            <version>1.0.0-LOXAL</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
@@ -81,9 +87,9 @@
                     <target>1.8</target>
                     <optimize>true</optimize>
                     <compilerArgument>-Xlint:unchecked</compilerArgument>
-                    <compilerArguments>
-                        <profile>compact1</profile>
-                    </compilerArguments>
+                    <!--<compilerArguments>-->
+                    <!--<profile>compact1</profile>-->
+                    <!--</compilerArguments>-->
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
                 </configuration>

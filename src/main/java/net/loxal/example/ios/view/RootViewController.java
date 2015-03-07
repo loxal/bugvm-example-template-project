@@ -16,6 +16,9 @@
 
 package net.loxal.example.ios.view;
 
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
+import org.apache.http.impl.nio.client.HttpAsyncClients;
 import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.UIButton;
 import org.robovm.apple.uikit.UIButtonType;
@@ -25,20 +28,72 @@ import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewController;
 
 public class RootViewController extends UIViewController {
-	private int clickCount;
+    private int clickCount;
 
-	public RootViewController() {
-		final UIView view = getView();
-		view.setBackgroundColor(UIColor.white());
+    public RootViewController() {
+        final UIView view = getView();
+        view.setBackgroundColor(UIColor.white());
 
-		final UIButton button = UIButton.create(UIButtonType.System);
-		button.setFrame(new CGRect(100, 100, 90, 30));
-		button.setTitle("Touch :)", UIControlState.None);
+        final UIButton button = UIButton.create(UIButtonType.System);
+        button.setFrame(new CGRect(100, 100, 90, 30));
+        button.setTitle("Touch :)", UIControlState.Normal);
 
-		button.addOnTouchUpInsideListener((control, event) ->
-				button.setTitle("Touch #" + ++clickCount, UIControlState.None)
-		);
+        button.addOnTouchUpInsideListener((control, event) ->
+                        button.setTitle("Touch #" + ++clickCount, UIControlState.Normal)
+        );
 
-		view.addSubview(button);
-	}
+
+//        try {
+//            CloseableHttpAsyncClient httpClient;
+//        =
+//        HttpAsyncClients.createMinimal();
+//        new PoolingNHttpClientConnectionManager(null);
+//            httpClient.start();
+//            while(httpClient.isRunning())
+//                System.out.println("blah");
+//            httpClient.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+        final RequestConfig requestConfig = RequestConfig.custom()
+                .setSocketTimeout(3000)
+                .setConnectTimeout(500).build();
+        final CloseableHttpAsyncClient httpClient = HttpAsyncClients.custom()
+                .setDefaultRequestConfig(requestConfig)
+                .setMaxConnPerRoute(20)
+                .setMaxConnTotal(50)
+                .build();
+
+
+        // TODO take a look at rxjava-apache-http !!!!!!
+//		https://github.com/ReactiveX/RxApacheHttp
+//        try {
+//            System.out.println("test");
+//            HttpClient httpclient = new DefaultHttpClient();
+//            HttpResponse response = httpclient.execute(new HttpGet(URI.create("http://example.com")));
+//            StatusLine statusLine = response.getStatusLine();
+//            System.out.println("statusLine.getStatusCode() = " + statusLine.getStatusCode());
+//            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
+//
+//                ByteArrayOutputStream out = new ByteArrayOutputStream();
+//                response.getEntity().writeTo(out);
+//                String responseString = out.toString();
+//                out.close();
+////				button.setTitle(responseString, UIControlState.None);
+////                Logger.getGlobal().warning(responseString);
+////					System.out.println("responseString = " + responseString);
+//                //..more logic
+//            } else {
+//                //Closes the connection.
+//                System.out.println("123123 = " + 123123);
+//                response.getEntity().getContent().close();
+//                throw new IOException(statusLine.getReasonPhrase());
+//            }
+//        } catch (IOException e) {
+//
+//        }
+        view.addSubview(button);
+    }
+
 }
