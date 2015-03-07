@@ -64,6 +64,13 @@
                 <groupId>org.robovm</groupId>
                 <artifactId>robovm-maven-plugin</artifactId>
                 <version>${robovm.version}</version>
+                <configuration>
+                    <config>
+                        <mainClass>${robovm.mainClass}</mainClass>
+                        <os>ios</os>
+                        <arch>x86</arch>
+                    </config>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

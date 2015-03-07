@@ -38,16 +38,6 @@ class RootViewController : UIViewController() {
         val view = getView()
         view.setBackgroundColor(UIColor.white())
 
-        val button = UIButton.create(UIButtonType.System)
-        button.setFrame(CGRect(60.0, 100.0, 200.0, 30.0))
-        button.setTitle("“Hello World” in Kotlin!", UIControlState.Normal)
-
-        button.addOnTouchUpInsideListener(object : UIControl.OnTouchUpInsideListener {
-            override fun onTouchUpInside(control: UIControl, event: UIEvent) {
-                button.setTitle("Touch #" + ++clickCount, UIControlState.Normal)
-            }
-        })
-
         fun helloRest() {
             val httpClient = DefaultHttpClient()
             val response = httpClient.execute(HttpGet(URI.create("http://rest-kit-test-v1.test.cf.hybris.com/dilbert-quote/manager")))
@@ -64,6 +54,21 @@ class RootViewController : UIViewController() {
         }
         helloRest()
 
-        view.addSubview(button)
+        val helloWorldButton = createHelloWorldButton()
+        view.addSubview(helloWorldButton)
+    }
+
+    private fun createHelloWorldButton(): UIButton {
+        val button = UIButton.create(UIButtonType.System)
+        button.setFrame(CGRect(60.0, 100.0, 200.0, 30.0))
+        button.setTitle("“Hello World” in Kotlin!", UIControlState.Normal)
+
+        button.addOnTouchUpInsideListener(object : UIControl.OnTouchUpInsideListener {
+            override fun onTouchUpInside(control: UIControl, event: UIEvent) {
+                button.setTitle("Touch #" + ++clickCount, UIControlState.Normal)
+            }
+        })
+
+        return button
     }
 }

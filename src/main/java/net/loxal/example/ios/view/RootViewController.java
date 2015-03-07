@@ -41,5 +41,4 @@ public class RootViewController extends UIViewController {
 
         view.addSubview(button);
     }
-
 }
