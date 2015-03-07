@@ -36,9 +36,5 @@
         <pattern>java.util.logging.ConsoleHandler</pattern>
         <pattern>java.util.logging.SimpleFormatter</pattern>
         <pattern>org.glassfish.jersey.**</pattern>
-        <!--<pattern>org.glassfish.jersey.client.internal.**</pattern>-->
-        <!--<pattern>org.glassfish.jersey.client.internal.LocalizationMessages</pattern>-->
-        <!--<pattern>org.glassfish.jersey.internal.l10n.**</pattern>-->
-        <!--<pattern>org.glassfish.jersey.client.internal.**</pattern>-->
     </forceLinkClasses>
 </config>
