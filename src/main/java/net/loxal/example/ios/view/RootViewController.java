@@ -31,8 +31,7 @@ import org.robovm.apple.uikit.UIButton;
 import org.robovm.apple.uikit.UIButtonType;
 import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UIControlState;
-import org.robovm.apple.uikit.UIFont;
-import org.robovm.apple.uikit.UILabel;
+import org.robovm.apple.uikit.UITextView;
 import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewController;
 
@@ -43,7 +42,7 @@ import java.net.URI;
 public class RootViewController extends UIViewController {
     private static final String INIT_QUOTE = "Locally it works.";
     private final UIView view = getView();
-    private final UILabel quoteContainer = new UILabel();
+    private final UITextView quoteContainer = new UITextView();
     private final UIButton nextQuote = UIButton.create(UIButtonType.System);
     private final ObjectMapper mapper = new ObjectMapper();
 
@@ -64,8 +63,7 @@ public class RootViewController extends UIViewController {
     private void initQuoteContainer() {
         quoteContainer.setFrame(new CGRect(10.0, 100, 300, 100));
         quoteContainer.setText(INIT_QUOTE);
-        quoteContainer.setShadowColor(UIColor.blue());
-        quoteContainer.setFont(UIFont.getSystemFont(12.0));
+        quoteContainer.setBackgroundColor(UIColor.lightGray());
 
         view.addSubview(quoteContainer);
     }
@@ -84,8 +82,8 @@ public class RootViewController extends UIViewController {
     private void showQuote(String managerQuote) {
         try {
             final Quote quote = mapper.readValue(managerQuote, Quote.class);
-            quoteContainer.setText("“" + quote.getQuote() + "” \n – Dilbert, the Manager");
-            quoteContainer.adjustsFontSizeToFitWidth();
+            quoteContainer.setText("“" + quote.getQuote()
+                    + "” \n\n\n \t\t\t\t\t                         – Dilbert, the Manager");
         } catch (final IOException e) {
             HelloWorld.LOG.severe(e.getMessage());
         }
