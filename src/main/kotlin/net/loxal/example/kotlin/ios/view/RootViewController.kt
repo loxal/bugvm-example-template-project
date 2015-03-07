@@ -48,18 +48,21 @@ class RootViewController : UIViewController() {
             }
         })
 
-        val httpClient = DefaultHttpClient()
-        val response = httpClient.execute(HttpGet(URI.create("http://rest-kit-test-v1.test.cf.hybris.com/dilbert-quote/manager")))
-        val statusLine = response.getStatusLine()
-        if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
-            val out = ByteArrayOutputStream()
-            response.getEntity().writeTo(out)
-            val responseContent = out.toString()
-            out.close()
-            Logger.getGlobal().info(responseContent)
-        } else {
-            response.getEntity().getContent().close()
+        fun helloRest() {
+            val httpClient = DefaultHttpClient()
+            val response = httpClient.execute(HttpGet(URI.create("http://rest-kit-test-v1.test.cf.hybris.com/dilbert-quote/manager")))
+            val statusLine = response.getStatusLine()
+            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
+                val out = ByteArrayOutputStream()
+                response.getEntity().writeTo(out)
+                val responseContent = out.toString()
+                out.close()
+                Logger.getGlobal().info(responseContent)
+            } else {
+                response.getEntity().getContent().close()
+            }
         }
+        helloRest()
 
         view.addSubview(button)
     }
