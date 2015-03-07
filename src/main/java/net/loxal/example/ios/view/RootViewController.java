@@ -16,9 +16,6 @@
 
 package net.loxal.example.ios.view;
 
-import org.apache.http.client.config.RequestConfig;
-import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
-import org.apache.http.impl.nio.client.HttpAsyncClients;
 import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.UIButton;
 import org.robovm.apple.uikit.UIButtonType;
@@ -26,6 +23,9 @@ import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UIControlState;
 import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewController;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
 
 public class RootViewController extends UIViewController {
     private int clickCount;
@@ -43,27 +43,9 @@ public class RootViewController extends UIViewController {
         );
 
 
-//        try {
-//            CloseableHttpAsyncClient httpClient;
-//        =
-//        HttpAsyncClients.createMinimal();
-//        new PoolingNHttpClientConnectionManager(null);
-//            httpClient.start();
-//            while(httpClient.isRunning())
-//                System.out.println("blah");
-//            httpClient.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        Client c = ClientBuilder.newClient();
 
-        final RequestConfig requestConfig = RequestConfig.custom()
-                .setSocketTimeout(3000)
-                .setConnectTimeout(500).build();
-        final CloseableHttpAsyncClient httpClient = HttpAsyncClients.custom()
-                .setDefaultRequestConfig(requestConfig)
-                .setMaxConnPerRoute(20)
-                .setMaxConnTotal(50)
-                .build();
+        c.target("http://example.com");
 
 
         // TODO take a look at rxjava-apache-http !!!!!!
