@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.loxal.example.kotlin.ios
+package net.loxal.user.ios
 
 import org.robovm.apple.foundation.NSAutoreleasePool
 import org.robovm.apple.uikit.UIApplication
@@ -24,8 +24,9 @@ import org.robovm.apple.uikit.UIScreen
 import org.robovm.apple.uikit.UIWindow
 import kotlin.platform.platformStatic
 import net.loxal.example.kotlin.ios.view.RootViewController
+import java.util.logging.Logger
 
-public class HelloWorld : UIApplicationDelegateAdapter() {
+public class App : UIApplicationDelegateAdapter() {
 
     override fun didFinishLaunching(app: UIApplication?, launchOptions: UIApplicationLaunchOptions?): Boolean {
         val window = UIWindow(UIScreen.getMainScreen().getNativeBounds())
@@ -36,9 +37,10 @@ public class HelloWorld : UIApplicationDelegateAdapter() {
     }
 
     class object {
+        val LOG: Logger = Logger.getGlobal()
         platformStatic fun main(vararg args: String) {
             val autoreleasePool = NSAutoreleasePool()
-            UIApplication.main<UIApplication, HelloWorld>(args, null, javaClass<HelloWorld>())
+            UIApplication.main<UIApplication, App>(args, null, javaClass<App>())
             autoreleasePool.close()
         }
     }
