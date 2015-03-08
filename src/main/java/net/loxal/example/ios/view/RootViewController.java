@@ -18,7 +18,6 @@ package net.loxal.example.ios.view;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.loxal.example.ios.HelloWorld;
-import net.loxal.example.kotlin.ios.model.Quote;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -79,13 +78,6 @@ public class RootViewController extends UIViewController {
     }
 
     private void showQuote(String managerQuote) {
-        try {
-            final Quote quote = mapper.readValue(managerQuote, Quote.class);
-            quoteContainer.setText("“" + quote.getQuote()
-                    + "” \n\n\n \t\t\t\t\t\t – Dilbert, the Manager");
-        } catch (final IOException e) {
-            HelloWorld.LOG.severe(e.getMessage());
-        }
     }
 
     private String fetchManagerQuote() {
