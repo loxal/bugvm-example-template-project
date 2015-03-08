@@ -73,7 +73,7 @@ public class RootViewController : UIViewController() {
 
     private fun showInfo(info: String) {
         val host = mapper.readValue<Host>(info, javaClass<Host>())
-        infoContainer.setText("Time: ${Date()} \n Host: ${host.name} | IP Address: ${host.address}")
+        infoContainer.setText("Host name: ${host.name}  IP address: ${host.address} \n\n Last refresh: ${Date().toGMTString()}")
     }
 
     private fun fetchHostInfo(): String {
