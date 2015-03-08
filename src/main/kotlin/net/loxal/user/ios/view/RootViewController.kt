@@ -17,7 +17,6 @@
 package net.loxal.example.kotlin.ios.view
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import net.loxal.example.kotlin.ios.model.Quote
 import org.apache.http.HttpStatus
 import org.apache.http.client.methods.HttpGet
 import org.apache.http.impl.client.DefaultHttpClient
@@ -30,75 +29,66 @@ import org.robovm.apple.uikit.UITextView
 import org.robovm.apple.uikit.UIViewController
 
 import java.io.ByteArrayOutputStream
-import java.io.IOException
 import java.net.URI
-import net.loxal.user.ios.App
+import net.loxal.user.ios.model.Host
+import org.robovm.apple.uikit.NSTextAlignment
+import org.robovm.apple.uikit.UIControlContentHorizontalAlignment
+import java.util.Date
 
 public class RootViewController : UIViewController() {
     private val v = getView()
-    private val quoteContainer = UITextView()
-    private val nextQuote = UIButton.create(UIButtonType.System)
+    private val infoContainer = UITextView()
+    private val refresher = UIButton.create(UIButtonType.RoundedRect)
     private val mapper = ObjectMapper()
 
     private val httpClient = DefaultHttpClient()
-    private val uri: URI = URI.create("http://rest-kit-test-v1.test.cf.hybris.com/dilbert-quote/manager")
+    private val uri: URI = URI.create("http://rest-kit-test-v1.test.cf.hybris.com/who-am-i")
     private val httpGet: HttpGet = HttpGet(uri);
 
     {
         v.setBackgroundColor(UIColor.white())
 
-        initNextQuoteUi()
-        initQuoteContainer()
+        initRefreshUi()
+        initInfoContainer()
+        refreshStatus()
     }
 
-    private fun initQuoteContainer() {
-        quoteContainer.setFrame(CGRect(5.0, 100.0, 310.0, 100.0))
-        quoteContainer.setText(INIT_QUOTE)
+    private fun initInfoContainer() {
+        infoContainer.setFrame(CGRect(5.0, 100.0, 310.0, 100.0))
+        infoContainer.setTextAlignment(NSTextAlignment.Center)
 
-        v.addSubview(quoteContainer)
+        v.addSubview(infoContainer)
     }
 
-    private fun initNextQuoteUi() {
-        nextQuote.setFrame(CGRect(115.0, 260.0, 90.0, 30.0))
-        nextQuote.setTitle("Next Quote", UIControlState.Normal)
-        v.addSubview(nextQuote)
+    private fun initRefreshUi() {
+        refresher.setFrame(CGRect(5.0, 260.0, 310.0, 30.0))
+        refresher.setTitle("Refresh Status", UIControlState.Normal)
+        refresher.setContentHorizontalAlignment(UIControlContentHorizontalAlignment.Center)
+        v.addSubview(refresher)
 
-        nextQuote.addOnTouchUpInsideListener({ control, event ->
-            val managerQuote = fetchManagerQuote();
-            showQuote(managerQuote);
-        })
+        refresher.addOnTouchUpInsideListener({ control, event -> refreshStatus() })
     }
 
-    private fun showQuote(managerQuote: String) {
-        try {
-            val quote = mapper.readValue<Quote>(managerQuote, javaClass<Quote>())
-            quoteContainer.setText("“" + quote.quote + "” \n\n\n \t\t\t\t\t\t – Dilbert, the Manager")
-        } catch (e: IOException) {
-            App.LOG.severe(e.getMessage())
-        }
+    private fun refreshStatus() = showInfo(fetchHostInfo())
+
+    private fun showInfo(info: String) {
+        val host = mapper.readValue<Host>(info, javaClass<Host>())
+        infoContainer.setText("Time: ${Date()} \n Host: ${host.name} | IP Address: ${host.address}")
     }
 
-    private fun fetchManagerQuote(): String {
-        try {
-            ByteArrayOutputStream().use { out ->
-                val response = httpClient.execute(httpGet)
-                val statusLine = response.getStatusLine()
-                val entity = response.getEntity()
-                if (HttpStatus.SC_OK == statusLine.getStatusCode()) {
-                    entity.writeTo(out)
-                    return out.toString()
-                } else {
-                    entity.getContent().close()
-                }
+    private fun fetchHostInfo(): String {
+        ByteArrayOutputStream().use { out ->
+            val response = httpClient.execute(httpGet)
+            val status = response.getStatusLine()
+            val entity = response.getEntity()
+            if (HttpStatus.SC_OK == status.getStatusCode()) {
+                entity.writeTo(out)
+                return out.toString()
+            } else {
+                entity.getContent().close()
             }
-        } catch (e: IOException) {
-            App.LOG.severe(e.getMessage())
         }
 
-        return INIT_QUOTE
-    }
-
-    class object {
-        private val INIT_QUOTE = "Locally it works."
+        return "I’m very sorry, this should not happen."
     }
 }

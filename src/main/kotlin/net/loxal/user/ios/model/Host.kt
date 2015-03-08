@@ -14,9 +14,6 @@
  * limitations under the License.
  */
 
-package net.loxal.example.kotlin.ios.model
+package net.loxal.user.ios.model
 
-data class Quote(
-        var id: Int = 0,
-        var quote: String = "You must have done something wrong."
-)
+class Host(var name: String = "unknown host name", var address: String = "unknown IP address")
