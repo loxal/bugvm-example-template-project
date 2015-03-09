@@ -32,7 +32,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <robovm.version>1.0.0-beta-04</robovm.version>
+        <robovm.version>1.0.0-SNAPSHOT</robovm.version>
         <kotlin.version>0.10.770</kotlin.version>
         <robovm.mainClass>net.loxal.example.ios.HelloWorld</robovm.mainClass>
     </properties>
@@ -53,13 +53,13 @@
         <dependency>
             <groupId>org.robovm</groupId>
             <artifactId>robovm-rt</artifactId>
-            <version>1.0.0-LOXAL</version>
+            <version>${robovm.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.robovm</groupId>
             <artifactId>robovm-cocoatouch</artifactId>
-            <version>1.0.0-LOXAL</version>
+            <version>${robovm.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

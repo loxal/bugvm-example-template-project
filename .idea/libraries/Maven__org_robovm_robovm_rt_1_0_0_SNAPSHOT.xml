@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.robovm:robovm-rt:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/robovm/robovm-rt/1.0.0-SNAPSHOT/robovm-rt-1.0.0-20150308.004808-231.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/robovm/robovm-rt/1.0.0-SNAPSHOT/robovm-rt-1.0.0-20150308.004808-231-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/robovm/robovm-rt/1.0.0-SNAPSHOT/robovm-rt-1.0.0-20150308.004808-231-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
