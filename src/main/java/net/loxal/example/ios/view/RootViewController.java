@@ -16,7 +16,6 @@
 
 package net.loxal.example.ios.view;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import net.loxal.example.ios.HelloWorld;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -43,7 +42,6 @@ public class RootViewController extends UIViewController {
     private final UIView view = getView();
     private final UITextView quoteContainer = new UITextView();
     private final UIButton nextQuote = UIButton.create(UIButtonType.System);
-    private final ObjectMapper mapper = new ObjectMapper();
 
     private final HttpClient httpClient = new DefaultHttpClient();
     private final URI uri = URI.create("http://rest-kit-test-v1.test.cf.hybris.com/dilbert-quote/manager");
