@@ -1,5 +1,5 @@
 # RoboVM Template Project
-An OOB working *RoboVM* template project for *IntelliJ IDEA*, **Maven**, and **Gradle** in order to build iOS apps.
+An out of the box working *RoboVM* template project for *IntelliJ IDEA*, **Maven**, and **Gradle** in order to build iOS apps.
 Currently it’s not possible to start the application from IntelliJ IDEA.
 
 ## Getting Started
