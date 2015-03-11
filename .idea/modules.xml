@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/robovm-template.iml" filepath="$PROJECT_DIR$/robovm-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robovm-template-project-for-intellij-idea-maven-gradle.iml" filepath="$PROJECT_DIR$/robovm-template-project-for-intellij-idea-maven-gradle.iml" />
     </modules>
   </component>
 </project>

@@ -33,10 +33,10 @@ public class RootViewController extends UIViewController {
 
 		final UIButton button = UIButton.create(UIButtonType.System);
 		button.setFrame(new CGRect(100, 100, 90, 30));
-		button.setTitle("Touch :)", UIControlState.None);
+		button.setTitle("Touch :)", UIControlState.Normal);
 
 		button.addOnTouchUpInsideListener((control, event) ->
-				button.setTitle("Touch #" + ++clickCount, UIControlState.None)
+						button.setTitle("Touch #" + ++clickCount, UIControlState.Normal)
 		);
 
 		view.addSubview(button);

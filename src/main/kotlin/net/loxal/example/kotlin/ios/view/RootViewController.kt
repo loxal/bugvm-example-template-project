@@ -34,11 +34,11 @@ class RootViewController : UIViewController() {
 
         val button = UIButton.create(UIButtonType.System)
         button.setFrame(CGRect(60.0, 100.0, 200.0, 30.0))
-        button.setTitle("“Hello World” in Kotlin!", UIControlState.None)
+        button.setTitle("“Hello World” in Kotlin!", UIControlState.Normal)
 
         button.addOnTouchUpInsideListener(object : UIControl.OnTouchUpInsideListener {
             override fun onTouchUpInside(control: UIControl, event: UIEvent) {
-                button.setTitle("Touch #" + ++clickCount, UIControlState.None)
+                button.setTitle("Touch #" + ++clickCount, UIControlState.Normal)
             }
         })
 
