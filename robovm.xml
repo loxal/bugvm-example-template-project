@@ -35,5 +35,6 @@
         <pattern>org.apache.commons.logging.impl.WeakHashtable</pattern>
         <pattern>java.util.logging.ConsoleHandler</pattern>
         <pattern>java.util.logging.SimpleFormatter</pattern>
+        <pattern>**.*</pattern>
     </forceLinkClasses>
 </config>
