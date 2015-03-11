@@ -21,8 +21,8 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:0.10.770" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-runtime:0.10.770" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-rt:1.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-cocoatouch:1.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-objc:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-rt:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-cocoatouch:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-objc:1.0.0" level="project" />
   </component>
 </module>
