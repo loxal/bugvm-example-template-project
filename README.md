@@ -11,7 +11,7 @@ Currently it’s not possible to start the application from IntelliJ IDEA.
 	All subsequent builds are substantially faster.
 
 * Run with Maven 
-	`mvn clean compile robovm:create-ipa robovm:iphone-sim`
+	`mvn clean compile robovm:iphone-sim`
 	
 	* Run a “Hello, World!” app written in ***Kotlin***
 	
@@ -21,7 +21,7 @@ Currently it’s not possible to start the application from IntelliJ IDEA.
 	width="150" height="276">
 
 
-* Run with Gradle `gradle clean build createIPA launchIPhoneSimulator`
+* Run with Gradle `gradle clean build launchIPhoneSimulator`
 	* tested with v2.2.1
 
 ## References
