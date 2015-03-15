@@ -22,7 +22,7 @@ Currently it’s not possible to start the application from IntelliJ IDEA.
 
 
 * Run with Gradle `gradle clean build launchIPhoneSimulator`
-	* tested with v2.2.1
+	* tested with v2.3
 
 ## References
 
