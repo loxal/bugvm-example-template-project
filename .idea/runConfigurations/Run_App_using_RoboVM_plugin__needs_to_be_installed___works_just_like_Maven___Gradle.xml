@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run App" type="robovm.config" factoryName="iOS Application" singleton="true">
+  <configuration default="false" name="Run App using RoboVM plugin (needs to be installed), works just like Maven / Gradle" type="robovm.config" factoryName="iOS Application" singleton="true">
     <module name="" />
     <option name="sdk" value="8.2" />
     <option name="device" value="iPhone-6" />
