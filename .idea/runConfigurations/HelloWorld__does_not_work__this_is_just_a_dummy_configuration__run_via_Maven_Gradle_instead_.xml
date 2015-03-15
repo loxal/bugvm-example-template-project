@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="HelloWorld" type="Application" factoryName="Application" singleton="true" nameIsGenerated="true">
+  <configuration default="false" name="HelloWorld (does not work, this is just a dummy configuration, run via Maven/Gradle instead)" type="Application" factoryName="Application" singleton="true">
     <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
       <pattern>
         <option name="PATTERN" value="org.robovm.samples.helloworld.*" />
@@ -15,7 +15,7 @@
     <option name="ENABLE_SWING_INSPECTOR" value="false" />
     <option name="ENV_VARIABLES" />
     <option name="PASS_PARENT_ENVS" value="true" />
-    <module name="robovm-template" />
+    <module name="robovm-template-project-for-intellij-idea-maven-gradle" />
     <envs />
     <RunnerSettings RunnerId="Debug">
       <option name="DEBUG_PORT" value="" />
