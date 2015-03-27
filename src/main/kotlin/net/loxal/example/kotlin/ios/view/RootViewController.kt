@@ -17,18 +17,12 @@
 package net.loxal.example.kotlin.ios.view
 
 import org.robovm.apple.coregraphics.CGRect
-import org.robovm.apple.uikit.UIButton
-import org.robovm.apple.uikit.UIButtonType
-import org.robovm.apple.uikit.UIColor
-import org.robovm.apple.uikit.UIControl
-import org.robovm.apple.uikit.UIControlState
-import org.robovm.apple.uikit.UIEvent
-import org.robovm.apple.uikit.UIViewController
+import org.robovm.apple.uikit.*
 
 class RootViewController : UIViewController() {
     private var clickCount: Int = 0
 
-    {
+    init {
         val view = getView()
         view.setBackgroundColor(UIColor.white())
 

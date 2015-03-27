@@ -16,14 +16,10 @@
 
 package net.loxal.example.kotlin.ios
 
-import org.robovm.apple.foundation.NSAutoreleasePool
-import org.robovm.apple.uikit.UIApplication
-import org.robovm.apple.uikit.UIApplicationDelegateAdapter
-import org.robovm.apple.uikit.UIApplicationLaunchOptions
-import org.robovm.apple.uikit.UIScreen
-import org.robovm.apple.uikit.UIWindow
-import kotlin.platform.platformStatic
 import net.loxal.example.kotlin.ios.view.RootViewController
+import org.robovm.apple.foundation.NSAutoreleasePool
+import org.robovm.apple.uikit.*
+import kotlin.platform.platformStatic
 
 public class HelloWorld : UIApplicationDelegateAdapter() {
 
@@ -35,7 +31,7 @@ public class HelloWorld : UIApplicationDelegateAdapter() {
         return true
     }
 
-    class object {
+    companion object {
         platformStatic fun main(vararg args: String) {
             val autoreleasePool = NSAutoreleasePool()
             UIApplication.main<UIApplication, HelloWorld>(args, null, javaClass<HelloWorld>())
