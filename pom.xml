@@ -28,12 +28,12 @@
         using either Maven or Gradle as the build tool.
     </description>
     <packaging>jar</packaging>
-    <version>1.0.2-RELEASE</version>
+    <version>1.0.3-RELEASE</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <robovm.version>1.0.0</robovm.version>
-        <kotlin.version>0.10.770</kotlin.version>
+        <kotlin.version>0.11.91</kotlin.version>
         <robovm.mainClass>net.loxal.example.ios.HelloWorld</robovm.mainClass>
     </properties>
 
