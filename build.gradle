@@ -15,7 +15,7 @@
  */
 
 buildscript {
-    project.ext.roboVMVersion = "1.0.0"
+    project.ext.roboVMVersion = "1.1.0"
 
     repositories {
         mavenLocal()
