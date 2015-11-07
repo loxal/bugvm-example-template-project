@@ -17,12 +17,7 @@
 package net.loxal.example.ios.view;
 
 import org.robovm.apple.coregraphics.CGRect;
-import org.robovm.apple.uikit.UIButton;
-import org.robovm.apple.uikit.UIButtonType;
-import org.robovm.apple.uikit.UIColor;
-import org.robovm.apple.uikit.UIControlState;
-import org.robovm.apple.uikit.UIView;
-import org.robovm.apple.uikit.UIViewController;
+import org.robovm.apple.uikit.*;
 
 public class RootViewController extends UIViewController {
 	private int clickCount;
@@ -31,7 +26,7 @@ public class RootViewController extends UIViewController {
 		final UIView view = getView();
 		view.setBackgroundColor(UIColor.white());
 
-		final UIButton button = UIButton.create(UIButtonType.System);
+		final UIButton button = new UIButton(UIButtonType.System);
 		button.setFrame(new CGRect(100, 100, 90, 30));
 		button.setTitle("Touch :)", UIControlState.Normal);
 

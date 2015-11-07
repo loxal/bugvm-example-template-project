@@ -23,11 +23,11 @@ class RootViewController : UIViewController() {
     private var clickCount: Int = 0
 
     init {
-        val view = getView()
-        view.setBackgroundColor(UIColor.white())
+        val view = view
+        view.backgroundColor = UIColor.white()
 
-        val button = UIButton.create(UIButtonType.System)
-        button.setFrame(CGRect(60.0, 100.0, 200.0, 30.0))
+        val button = UIButton(UIButtonType.System)
+        button.frame = CGRect(60.0, 100.0, 200.0, 30.0)
         button.setTitle("“Hello World” in Kotlin!", UIControlState.Normal)
 
         button.addOnTouchUpInsideListener(object : UIControl.OnTouchUpInsideListener {

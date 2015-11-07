@@ -19,22 +19,22 @@ package net.loxal.example.kotlin.ios
 import net.loxal.example.kotlin.ios.view.RootViewController
 import org.robovm.apple.foundation.NSAutoreleasePool
 import org.robovm.apple.uikit.*
-import kotlin.platform.platformStatic
 
 public class HelloWorld : UIApplicationDelegateAdapter() {
 
     override fun didFinishLaunching(app: UIApplication?, launchOptions: UIApplicationLaunchOptions?): Boolean {
-        val window = UIWindow(UIScreen.getMainScreen().getNativeBounds())
-        window.setRootViewController(RootViewController())
+        val window = UIWindow(UIScreen.getMainScreen().nativeBounds)
+        window.rootViewController = RootViewController()
         window.makeKeyAndVisible()
 
         return true
     }
 
     companion object {
-        platformStatic fun main(vararg args: String) {
+        @JvmStatic
+        fun main(vararg args: String) {
             val autoreleasePool = NSAutoreleasePool()
-            UIApplication.main<UIApplication, HelloWorld>(args, null, javaClass<HelloWorld>())
+            UIApplication.main<UIApplication, HelloWorld>(args, null, HelloWorld::class.java)
             autoreleasePool.close()
         }
     }

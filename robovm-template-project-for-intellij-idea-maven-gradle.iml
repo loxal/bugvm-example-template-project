@@ -14,15 +14,15 @@
       <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="RoboVM SDK 1.9.0" jdkType="RoboVM SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="Gradle: org.robovm:robovm-rt:1.0.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.robovm:robovm-cocoatouch:1.0.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.robovm:robovm-objc:1.0.0" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:0.11.91.1" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-runtime:0.11.91.1" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-rt:1.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-cocoatouch:1.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-objc:1.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.0.0-beta-1103" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-runtime:1.0.0-beta-1103" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-rt:1.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-cocoatouch:1.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-objc:1.9.0" level="project" />
   </component>
 </module>

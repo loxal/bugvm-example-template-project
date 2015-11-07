@@ -28,12 +28,12 @@
         using either Maven or Gradle as the build tool.
     </description>
     <packaging>jar</packaging>
-    <version>1.1.0-RELEASE</version>
+    <version>1.2.0-RELEASE</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <robovm.version>1.1.0</robovm.version>
-        <kotlin.version>0.11.91.1</kotlin.version>
+        <robovm.version>1.9.0</robovm.version>
+        <kotlin.version>1.0.0-beta-1103</kotlin.version>
         <robovm.mainClass>net.loxal.example.ios.HelloWorld</robovm.mainClass>
     </properties>
 
@@ -75,7 +75,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
+                <version>3.3</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
