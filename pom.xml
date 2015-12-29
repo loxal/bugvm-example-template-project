@@ -33,7 +33,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <robovm.version>1.9.0</robovm.version>
-        <kotlin.version>1.0.0-beta-2417</kotlin.version>
+        <kotlin.version>1.0.0-beta-4584</kotlin.version>
         <robovm.mainClass>net.loxal.example.ios.HelloWorld</robovm.mainClass>
     </properties>
 
