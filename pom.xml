@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright 2015 Alexander Orlov <alexander.orlov@loxal.net>
+  ~ Copyright 2016 Alexander Orlov <alexander.orlov@loxal.net>
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -32,8 +32,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <robovm.version>1.9.0</robovm.version>
-        <kotlin.version>1.0.0-beta-4584</kotlin.version>
+        <robovm.version>1.13.0</robovm.version>
+        <kotlin.version>1.0.0-rc-1036</kotlin.version>
         <robovm.mainClass>net.loxal.example.ios.HelloWorld</robovm.mainClass>
     </properties>
 

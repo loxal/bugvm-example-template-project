@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Alexander Orlov <alexander.orlov@loxal.net>
+ * Copyright 2016 Alexander Orlov <alexander.orlov@loxal.net>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
  */
 
 buildscript {
-    project.ext.roboVMVersion = "1.9.0"
+    project.ext.roboVMVersion = "1.13.0"
 
     repositories {
         mavenLocal()
@@ -54,5 +54,5 @@ robovm {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '2.10'
 }

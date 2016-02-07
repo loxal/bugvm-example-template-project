@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="robovm-template-project-for-intellij-idea-maven-gradle" org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="AutoImportedSourceRoots">
+    <option name="directories">
+      <list>
+        <option value="src/main/java" />
+        <option value="src/main/kotlin" />
+        <option value="src/main/resources" />
+        <option value="src/test/java" />
+        <option value="src/test/kotlin" />
+        <option value="src/test/resources" />
+      </list>
+    </option>
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -17,10 +29,10 @@
     <orderEntry type="jdk" jdkName="RoboVM SDK 1.12.0" jdkType="RoboVM SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="Gradle: org.robovm:robovm-cocoatouch:1.0.0" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.0.0-beta-4584" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-runtime:1.0.0-beta-4584" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-rt:1.9.0" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-cocoatouch:1.9.0" level="project" />
-    <orderEntry type="library" name="Maven: org.robovm:robovm-objc:1.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.0.0-rc-1036" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-runtime:1.0.0-rc-1036" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-rt:1.13.0" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-cocoatouch:1.13.0" level="project" />
+    <orderEntry type="library" name="Maven: org.robovm:robovm-objc:1.13.0" level="project" />
   </component>
 </module>
