@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-mvn clean compile robovm:iphone-sim
+gradle clean build launchIPhoneSimulator

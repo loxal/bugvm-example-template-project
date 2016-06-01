@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run" type="com.bugvm.idea.running.BugVmIOSConfigurationType" factoryName="BugVM iOS">
+    <module name="bugvm-template-project" />
+    <option name="moduleName" value="bugvm-template-project" />
+    <option name="targetType" value="Simulator" />
+    <option name="deviceArch" value="arm64" />
+    <option name="signingIdentity" value="Auto (matches 'iPhone Developer|iOS Development')" />
+    <option name="provisioningProfile" value="Auto" />
+    <option name="simArch" value="x86_64" />
+    <option name="simulatorName" value="com.apple.CoreSimulator.SimDeviceType.iPhone-6s" />
+    <option name="arguments" value="" />
+    <option name="workingDir" value="" />
+    <method />
+  </configuration>
+</component>

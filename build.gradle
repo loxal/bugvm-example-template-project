@@ -15,44 +15,49 @@
  */
 
 buildscript {
-    project.ext.roboVMVersion = "1.13.0"
+    version = '1.0.0'
+//    sourceCompatibility = 1.7
+//    targetCompat = 1.7
 
+//    project.ext.bugVmVersion = "1.0.9"
+//
     repositories {
-        mavenLocal()
+//        mavenLocal()
+        maven { url 'https://oss.sonatype.org/content/repositories/releases' }
         mavenCentral()
-        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
     }
     dependencies {
-        classpath group: 'org.robovm', name: 'robovm-gradle-plugin', version: project.ext.roboVMVersion
+//        classpath "com.bugvm:bugvm-gradle-plugin:$project.ext.bugVmVersion"
+        classpath 'com.bugvm:bugvm-gradle:1.1.0'
     }
 }
+
 
 apply plugin: 'java'
-apply plugin: 'robovm'
+apply plugin: 'bugvm'
 
-sourceSets {
-    main {
-        java {
-            srcDir 'src/main/java'
-        }
-    }
-}
+//sourceSets {
+//    main {
+//        java {
+//            srcDir 'src/main/java'
+//        }
+//    }
+//}
 
 repositories {
-    mavenLocal()
+//    mavenLocal()
+    maven { url 'https://oss.sonatype.org/content/repositories/releases' }
     mavenCentral()
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 dependencies {
-    compile group: 'org.robovm', name: 'robovm-rt', version: project.roboVMVersion
-    compile group: 'org.robovm', name: 'robovm-cocoatouch', version: project.roboVMVersion
-}
-
-robovm {
-    iosSkipSigning = true
+    compile 'com.bugvm:bugvm-gradle:1.1.0'
+//    compile "com.bugvm:bugvm-rt:$project.ext.bugVmVersion"
+    compile "com.bugvm:bugvm-rt:1.1.0"
+//    compile "com.bugvm:bugvm-cocoatouch:$project.ext.bugVmVersion"
+    compile "com.bugvm:bugvm-cocoatouch:1.1.0"
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.11'
+    gradleVersion = '2.13'
 }

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/robovm-template-project-for-intellij-idea-maven-gradle.iml" filepath="$PROJECT_DIR$/robovm-template-project-for-intellij-idea-maven-gradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bugvm-template-project.iml" filepath="$PROJECT_DIR$/.idea/modules/bugvm-template-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bugvm-template-project_main.iml" filepath="$PROJECT_DIR$/.idea/modules/bugvm-template-project_main.iml" group="bugvm-template-project" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bugvm-template-project_test.iml" filepath="$PROJECT_DIR$/.idea/modules/bugvm-template-project_test.iml" group="bugvm-template-project" />
     </modules>
   </component>
 </project>

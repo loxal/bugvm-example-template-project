@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Alexander Orlov <alexander.orlov@loxal.net>
+ * Copyright 2016 Alexander Orlov <alexander.orlov@loxal.net>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,13 @@
 
 package net.loxal.example.ios.view;
 
-import org.robovm.apple.coregraphics.CGRect;
-import org.robovm.apple.uikit.*;
+import com.bugvm.apple.coregraphics.CGRect;
+import com.bugvm.apple.uikit.UIButton;
+import com.bugvm.apple.uikit.UIButtonType;
+import com.bugvm.apple.uikit.UIColor;
+import com.bugvm.apple.uikit.UIControlState;
+import com.bugvm.apple.uikit.UIView;
+import com.bugvm.apple.uikit.UIViewController;
 
 public class RootViewController extends UIViewController {
 	private int clickCount;
@@ -30,9 +35,9 @@ public class RootViewController extends UIViewController {
 		button.setFrame(new CGRect(100, 100, 90, 30));
 		button.setTitle("Touch :)", UIControlState.Normal);
 
-		button.addOnTouchUpInsideListener((control, event) ->
-						button.setTitle("Touch #" + ++clickCount, UIControlState.Normal)
-		);
+//		button.addOnTouchUpInsideListener((control, event) ->
+//						button.setTitle("Touch #" + ++clickCount, UIControlState.Normal)
+//		);
 
 		view.addSubview(button);
 	}

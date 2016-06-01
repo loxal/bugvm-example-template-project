@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Alexander Orlov <alexander.orlov@loxal.net>
+ * Copyright 2016 Alexander Orlov <alexander.orlov@loxal.net>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,13 +16,13 @@
 
 package net.loxal.example.ios;
 
+import com.bugvm.apple.foundation.NSAutoreleasePool;
+import com.bugvm.apple.uikit.UIApplication;
+import com.bugvm.apple.uikit.UIApplicationDelegateAdapter;
+import com.bugvm.apple.uikit.UIApplicationLaunchOptions;
+import com.bugvm.apple.uikit.UIScreen;
+import com.bugvm.apple.uikit.UIWindow;
 import net.loxal.example.ios.view.RootViewController;
-import org.robovm.apple.foundation.NSAutoreleasePool;
-import org.robovm.apple.uikit.UIApplication;
-import org.robovm.apple.uikit.UIApplicationDelegateAdapter;
-import org.robovm.apple.uikit.UIApplicationLaunchOptions;
-import org.robovm.apple.uikit.UIScreen;
-import org.robovm.apple.uikit.UIWindow;
 
 public class HelloWorld extends UIApplicationDelegateAdapter {
 	public static void main(final String... args) {

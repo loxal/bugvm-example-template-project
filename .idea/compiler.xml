@@ -23,16 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="robovm" />
-      </profile>
-      <profile default="false" name="Annotation profile for robovm-template-project-for-intellij-idea-maven-gradle" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="robovm-template-project-for-intellij-idea-maven-gradle" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="bugvm-template-project_main" target="1.8" />
+      <module name="bugvm-template-project_test" target="1.8" />
       <module name="robovm-template" target="1.8" />
       <module name="robovm-template-project-for-intellij-idea-maven-gradle" target="1.8" />
     </bytecodeTargetLevel>
