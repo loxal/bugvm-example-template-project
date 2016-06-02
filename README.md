@@ -13,9 +13,7 @@
 </a></span>
 <!-- /BADGES -->
 # BugVM Template Project
-An out of the box working *BugVM* template project for *IntelliJ IDEA*, **Maven**, and **Gradle** in order to build iOS apps.
-
-<iframe src="http://example.com" width="640" height="480" style="display:block; margin: 0 auto;">&nbsp;</iframe>
+An out of the box working *BugVM* template project in order to build iOS apps.
 
 ## Getting Started
 * Prerequisites
