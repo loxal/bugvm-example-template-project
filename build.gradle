@@ -16,18 +16,15 @@
 
 buildscript {
     version = '1.0.0'
-//    sourceCompatibility = 1.7
-//    targetCompat = 1.7
 
-//    project.ext.bugVmVersion = "1.0.9"
-//
+    project.ext.bugVmVersion = '1.1.0'
+
     repositories {
-//        mavenLocal()
+        mavenLocal()
         maven { url 'https://oss.sonatype.org/content/repositories/releases' }
         mavenCentral()
     }
     dependencies {
-//        classpath "com.bugvm:bugvm-gradle-plugin:$project.ext.bugVmVersion"
         classpath 'com.bugvm:bugvm-gradle:1.1.0'
     }
 }
@@ -36,26 +33,17 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'bugvm'
 
-//sourceSets {
-//    main {
-//        java {
-//            srcDir 'src/main/java'
-//        }
-//    }
-//}
-
 repositories {
-//    mavenLocal()
+    mavenLocal()
     maven { url 'https://oss.sonatype.org/content/repositories/releases' }
     mavenCentral()
 }
 
 dependencies {
-    compile 'com.bugvm:bugvm-gradle:1.1.0'
-//    compile "com.bugvm:bugvm-rt:$project.ext.bugVmVersion"
-    compile "com.bugvm:bugvm-rt:1.1.0"
-//    compile "com.bugvm:bugvm-cocoatouch:$project.ext.bugVmVersion"
-    compile "com.bugvm:bugvm-cocoatouch:1.1.0"
+    compile "com.bugvm:bugvm-gradle:$project.ext.bugVmVersion"
+    compile "com.bugvm:bugvm-rt:$project.ext.bugVmVersion"
+    compile "com.bugvm:bugvm-cocoatouch:$project.ext.bugVmVersion"
+    compile "com.bugvm:bugvm-objc:$project.ext.bugVmVersion"
 }
 
 task wrapper(type: Wrapper) {

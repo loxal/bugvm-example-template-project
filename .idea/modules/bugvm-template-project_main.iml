@@ -12,6 +12,7 @@
     <orderEntry type="library" name="Gradle: com.bugvm:bugvm-gradle:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.bugvm:bugvm-rt:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.bugvm:bugvm-cocoatouch:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.bugvm:bugvm-objc:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.sonatype.aether:aether-connector-wagon:1.13.1" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-compress:1.5" level="project" />
     <orderEntry type="library" name="Gradle: com.bugvm:bugvm-dist-compiler:1.1.0" level="project" />
