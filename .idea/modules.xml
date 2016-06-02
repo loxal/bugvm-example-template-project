@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bugvm-template-project.iml" filepath="$PROJECT_DIR$/.idea/modules/bugvm-template-project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bugvm-template-project_main.iml" filepath="$PROJECT_DIR$/.idea/modules/bugvm-template-project_main.iml" group="bugvm-template-project" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bugvm-template-project_test.iml" filepath="$PROJECT_DIR$/.idea/modules/bugvm-template-project_test.iml" group="bugvm-template-project" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bugvm-example-template-project.iml" filepath="$PROJECT_DIR$/.idea/modules/bugvm-example-template-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bugvm-example-template-project_main.iml" filepath="$PROJECT_DIR$/.idea/modules/bugvm-example-template-project_main.iml" group="bugvm-example-template-project" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bugvm-example-template-project_test.iml" filepath="$PROJECT_DIR$/.idea/modules/bugvm-example-template-project_test.iml" group="bugvm-example-template-project" />
     </modules>
   </component>
 </project>
