@@ -11,6 +11,8 @@
 <span class="badge-gratipay"><a href="https://gratipay.com/~loxal" title="Donate weekly to this project using Gratipay">
 <img src="https://img.shields.io/badge/gratipay-donate-yellow.svg" alt="Gratipay Donate" />
 </a></span>
+
+[Support this work with cryptocurrencies like BitCoin!](http://me.loxal.net/coin-support.html)
 <!-- /BADGES -->
 # BugVM Template Project
 An out of the box working *BugVM* template project in order to build iOS apps.
