@@ -14,7 +14,8 @@
 <!-- /BADGES -->
 # BugVM Template Project
 An out of the box working *BugVM* template project for *IntelliJ IDEA*, **Maven**, and **Gradle** in order to build iOS apps.
-Currently it’s not possible to start the application from IntelliJ IDEA.
+
+<iframe src="http://example.com" width="640" height="480" style="display:block; margin: 0 auto;">&nbsp;</iframe>
 
 ## Getting Started
 * Prerequisites
@@ -29,7 +30,6 @@ Currently it’s not possible to start the application from IntelliJ IDEA.
 width="150" height="276">
 
 * Run with Gradle `gradle clean build launchIPhoneSimulator`
-	* tested with v2.12
 
 ## References
 
