@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.bugvm:bugvm-objc:1.1.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bugvm/bugvm-objc/1.1.4/ca472b86cfdac176856a600db831a298efdf6a8/bugvm-objc-1.1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bugvm/bugvm-objc/1.1.4/ccf9b3f0dde1a4d8aae8ff748267693d6f7563f4/bugvm-objc-1.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

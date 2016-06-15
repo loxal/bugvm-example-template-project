@@ -17,7 +17,7 @@
 buildscript {
     version = '1.0.0'
 
-    project.ext.bugVmVersion = '1.1.0'
+    project.ext.bugVmVersion = '1.1.4'
 
     repositories {
         mavenLocal()
@@ -28,7 +28,6 @@ buildscript {
         classpath "com.bugvm:bugvm-gradle:$bugVmVersion"
     }
 }
-
 
 apply plugin: 'java'
 apply plugin: 'bugvm'
